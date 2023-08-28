@@ -21,6 +21,7 @@ public class Generator : MonoBehaviour
     [SerializeField] private TileBase dirt;
     [SerializeField] private TileBase stone;
 
+    private List<int> generalHeaightMap;
     private List<int> dirtHeightMap;
     private List<int> stoneHeightMap;
     private GameObject player;
@@ -37,8 +38,9 @@ public class Generator : MonoBehaviour
 
     private void GenerateWorld()
     {
-        dirtHeightMap = GenerateHeightMap(150, 150 - dirtFaultPos, 150 + dirtFaultPos);
-        stoneHeightMap = GenerateHeightMap(130, 130 - stoneFaultPos, 130 + stoneFaultPos);
+        generalHeaightMap = GenerateHeightMap(0, chunksCount, - 100, 100, 3);
+        dirtHeightMap = GenerateHeightMap(150, chunkWidth * chunksCount, 150 - dirtFaultPos, 150 + dirtFaultPos, 1);
+        stoneHeightMap = GenerateHeightMap(130, chunkWidth * chunksCount, 130 - stoneFaultPos, 130 + stoneFaultPos, 1);
     }
 
     private void RenderChunks(float playerX)
@@ -64,6 +66,7 @@ public class Generator : MonoBehaviour
 
         RemoveInactiveChunks(playerChunk - 2, playerChunk + 2);
     }
+
     private IEnumerator GenerateChunk(Tilemap chunk, TileBase tile, List<int> heightMap, int queue, bool isFilled)
     {
         Vector3Int cellPosition = new Vector3Int();
@@ -88,16 +91,16 @@ public class Generator : MonoBehaviour
         yield break;
     }
 
-    private List<int> GenerateHeightMap(int startValue, int minValue, int maxValue)
+    private List<int> GenerateHeightMap(int startValue, int size, int minValue, int maxValue, int scatter)
     {
         List<int> heightMap = new List<int>();
         int height = startValue;
 
-        for (int i = 0; i < chunkWidth * chunksCount; i++)
+        for (int i = 0; i < size; i++)
         {
             height += Random.Range(-1, 2);
-            if (height < minValue) height++;
-            else if (height > maxValue) height--;
+            if (height < minValue) height += scatter;
+            else if (height > maxValue) height -= scatter;
 
             heightMap.Add(height);
         }

@@ -46,6 +46,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 9a23d0c5da33fbf4986918bc72b3097c, type: 3}
+    - {fileID: 2800000, guid: c9d14b3a78a04c943b73f00a1cd6b43f, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -53,15 +54,30 @@ SpriteAtlas:
     - 9a23d0c5da33fbf4986918bc72b3097c: 2106063258
     - 9a23d0c5da33fbf4986918bc72b3097c: 318197379
     - 9a23d0c5da33fbf4986918bc72b3097c: -1442057589
+    - c9d14b3a78a04c943b73f00a1cd6b43f: -1972953086
+    - c9d14b3a78a04c943b73f00a1cd6b43f: 181441791
+    - c9d14b3a78a04c943b73f00a1cd6b43f: 602268997
+    - c9d14b3a78a04c943b73f00a1cd6b43f: 1678408449
+    - c9d14b3a78a04c943b73f00a1cd6b43f: -925247711
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 2106063258, guid: 9a23d0c5da33fbf4986918bc72b3097c, type: 3}
   - {fileID: 318197379, guid: 9a23d0c5da33fbf4986918bc72b3097c, type: 3}
   - {fileID: -1442057589, guid: 9a23d0c5da33fbf4986918bc72b3097c, type: 3}
+  - {fileID: -1972953086, guid: c9d14b3a78a04c943b73f00a1cd6b43f, type: 3}
+  - {fileID: 181441791, guid: c9d14b3a78a04c943b73f00a1cd6b43f, type: 3}
+  - {fileID: 602268997, guid: c9d14b3a78a04c943b73f00a1cd6b43f, type: 3}
+  - {fileID: 1678408449, guid: c9d14b3a78a04c943b73f00a1cd6b43f, type: 3}
+  - {fileID: -925247711, guid: c9d14b3a78a04c943b73f00a1cd6b43f, type: 3}
   m_PackedSpriteNamesToIndex:
   - graps_2
   - graps_1
   - graps_0
+  - break_4
+  - break_1
+  - break_0
+  - break_3
+  - break_2
   m_RenderDataMap: {}
   m_Tag: base atlas
   m_IsVariant: 0

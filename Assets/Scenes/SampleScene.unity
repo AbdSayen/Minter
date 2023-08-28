@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Camera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,7 +185,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.29
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 356, y: 155, z: -10}
+  m_LocalPosition: {x: 50, y: 160, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -286,7 +286,7 @@ Transform:
   m_GameObject: {fileID: 703500510}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -398, y: -0.6754973, z: 0.024903772}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -304,11 +304,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014288f5bb2b8a149be36adc2fa50230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkWidth: 64
-  chunksCount: 20
+  chunkWidth: 32
+  chunksCount: 100
   minYPos: 0
   dirtFaultPos: 10
-  stoneFaultPos: 10
+  stoneFaultPos: 5
   chunkPrefab: {fileID: 2625837593365876382, guid: 23f128e993a705c45954398a6cdd16a0, type: 3}
   _grid: {fileID: 1076550513}
   grass: {fileID: 11400000, guid: b4e16f52f88ce904fb3cbd6eaaade23c, type: 2}
@@ -396,7 +396,7 @@ Transform:
   m_GameObject: {fileID: 739360032}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 155, z: 0}
+  m_LocalPosition: {x: 50, y: 160.3, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -495,7 +495,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1d64dd5977e594781c11c6ecae77ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  block: {fileID: 11400000, guid: d1b40a2769545414b82590987cceda67, type: 2}
+  breakProgress:
+  - {fileID: 11400000, guid: e664675773b3d5e4d9f940f02527f5d9, type: 2}
+  - {fileID: 11400000, guid: c72bdb98319c82f4fbdb4e86cdef7584, type: 2}
+  - {fileID: 11400000, guid: 8ee939bf95add4d4a810be6d95df3181, type: 2}
+  - {fileID: 11400000, guid: 7bb4f0d62e5232048b4a42d14ff539a6, type: 2}
+  - {fileID: 11400000, guid: 6d5d655b0c0d14846b8e24c4f0da865c, type: 2}
+  tilemapPrefab: {fileID: 2625837593365876382, guid: d3394f90040e9374882b94c436c039e0, type: 3}
+  tileProgress: {fileID: 0}
+  block: {fileID: 11400000, guid: a4f4bed73e15752478efd330a73562cc, type: 2}
 --- !u!1 &1076550512
 GameObject:
   m_ObjectHideFlags: 0

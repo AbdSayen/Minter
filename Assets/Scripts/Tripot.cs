@@ -6,6 +6,6 @@ public class Tripot : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, -10), 0.1f);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, -100), 0.1f);
     }
 }
